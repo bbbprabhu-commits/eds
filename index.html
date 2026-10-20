@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="description" content="Expressions D Studio in Trichy offers in-person and online dance classes, competition coaching, choreography, DJ services, sound and lighting, and event entertainment. Serving Tiruchirappalli since 2012." />
   <meta name="robots" content="index,follow,max-image-preview:large" />
-  <meta name="theme-color" content="#0f766e" />
+  <meta name="theme-color" content="#083b44" />
   <meta name="author" content="Expressions D Studio (EDS)" />
   <meta name="geo.region" content="IN-TN" />
   <meta name="geo.placename" content="Tiruchirappalli, Tamil Nadu, India" />
@@ -48,19 +48,23 @@
 
   <title>Expressions D Studio (EDS) — Trichy's Premier Dance Class, DJ Academy & Event Studio</title>
   <script src="https://cdn.tailwindcss.com/3.4.17"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Outfit:wght@600;700;800;900&display=swap" rel="stylesheet">
-  <script>
+    <script>
     tailwind.config = {
       darkMode: 'class',
       theme: {
         extend: {
           fontFamily: {
-            sans: ['Inter', 'system-ui', 'sans-serif'],
-            display: ['Outfit', 'Inter', 'system-ui', 'sans-serif']
+            sans: ['system-ui', '-apple-system', 'Segoe UI', 'sans-serif'],
+            display: ['system-ui', '-apple-system', 'Segoe UI', 'sans-serif']
           },
           colors: {
+            amber: {
+              300: '#fca5a5',
+              400: '#f87171',
+              500: '#ef4444',
+              600: '#dc2626',
+              950: '#450a0a'
+            },
             brand: {
               50: '#f0fdfa',
               100: '#ccfbf1',
@@ -93,7 +97,7 @@
     }
     .hero-gradient {
       background: radial-gradient(circle at 80% 20%, rgba(13, 148, 136, 0.22), transparent 45%),
-                  radial-gradient(circle at 20% 80%, rgba(212, 175, 55, 0.18), transparent 50%);
+                  radial-gradient(circle at 20% 80%, rgba(239, 68, 68, 0.16), transparent 50%);
     }
     .card-hover {
       transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.25s ease;
@@ -117,14 +121,16 @@
       background: #0f766e;
     }
 
-    :root { color-scheme: dark; --eds-teal:#0f766e; --eds-teal-bright:#2dd4bf; --eds-gold:#d4af37; }
+    :root { color-scheme: dark; --eds-teal:#0f766e; --eds-teal-bright:#2dd4bf; --eds-coral:#ef4444; }
     html { scroll-padding-top: 6rem; }
     body { min-width: 320px; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
     a, button, input, select, textarea { -webkit-tap-highlight-color: transparent; }
     button, a { touch-action: manipulation; }
     img { max-width:100%; height:auto; }
-    .hero-gradient { background: radial-gradient(circle at 80% 20%, rgba(13,148,136,.24), transparent 45%), radial-gradient(circle at 20% 80%, rgba(212,175,55,.18), transparent 50%), #082f35; }
-    :focus-visible { outline: 3px solid #d4af37; outline-offset: 3px; }
+    .hero-gradient { background: radial-gradient(circle at 80% 20%, rgba(13,148,136,.24), transparent 45%), radial-gradient(circle at 20% 80%, rgba(239,68,68,.16), transparent 50%), #082f35; }
+    :focus-visible { outline: 3px solid #f87171; outline-offset: 3px; }
+    /* Skip work for below-the-fold sections until they approach the viewport. */
+    main > section:not(#home) { content-visibility: auto; contain-intrinsic-size: auto 900px; }
     @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior:auto !important; animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; } }
     @media (max-width: 640px) { .glass-nav { backdrop-filter: blur(10px); } #mobileMenuDrawer { max-height: calc(100dvh - 5rem); overflow-y:auto; } }
 
@@ -289,7 +295,7 @@
           <!-- Right Column: Visual Hero Showcase Card -->
           <div class="lg:col-span-5">
             <div class="relative rounded-3xl overflow-hidden border border-white/15 bg-slate-900 shadow-2xl shadow-teal-950/50">
-              <img loading="lazy" decoding="async" src="assets/hero.webp" width="900" height="900" fetchpriority="high" decoding="async"
+              <img loading="eager" decoding="async" src="assets/hero.webp" width="900" height="900" fetchpriority="high"
                 alt="Expressions D Studio Trichy Urban Street Dance & Lighting"
                 class="w-full h-64 sm:h-80 lg:h-96 object-cover max-w-full"
               />
